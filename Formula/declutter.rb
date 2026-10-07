@@ -1,35 +1,35 @@
 class Declutter < Formula
   desc "Review AI-generated diffs with comments, tests, imports, logging and formatting toggled in and out"
   homepage "https://github.com/NikolajMosbaek/declutter-diff"
-  version "0.1.2"
+  version "0.1.3"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/NikolajMosbaek/declutter-diff/releases/download/v0.1.2/declutter-diff-aarch64-apple-darwin.tar.xz"
-      sha256 "72e0a6bce928bb3afd9b9178006418b17463a0d8c3a9fa0c967816db767461cc"
+      url "https://github.com/NikolajMosbaek/declutter-diff/releases/download/v0.1.3/declutter-diff-aarch64-apple-darwin.tar.xz"
+      sha256 "9e57dfabacabfc415bd1d4fa65354c9d8e060308759e9bd5665cfed2d2a73519"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/NikolajMosbaek/declutter-diff/releases/download/v0.1.2/declutter-diff-x86_64-apple-darwin.tar.xz"
-      sha256 "1b7934fd5256339f2c8b3daa4d39cf2d5cc36c87d207c8cbf0d8e205b610a2e2"
+      url "https://github.com/NikolajMosbaek/declutter-diff/releases/download/v0.1.3/declutter-diff-x86_64-apple-darwin.tar.xz"
+      sha256 "5d33d3217d14ea70aa9da933d42a5a2a05f1f19d471baad22cbdfa824669d955"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/NikolajMosbaek/declutter-diff/releases/download/v0.1.2/declutter-diff-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "7965b52198402db61bd3a487c478b5587179afd2d36f6b20ff8951230603b917"
+      url "https://github.com/NikolajMosbaek/declutter-diff/releases/download/v0.1.3/declutter-diff-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "abd1bf6a1ac8e9126470448de8086607b36df67d6e7c2e8bb77f35c778fbbb1f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/NikolajMosbaek/declutter-diff/releases/download/v0.1.2/declutter-diff-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "d164ccbd91078e7b908106c9ca3eb7e5513e2487c7683d3b7428fe80ca397f86"
+      url "https://github.com/NikolajMosbaek/declutter-diff/releases/download/v0.1.3/declutter-diff-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "c71a009e5a3cd95f7922644556f8ad0a69b264741ba3ee11bd1ebdf807604b01"
     end
   end
   license "MIT"
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin": {},
+    "aarch64-apple-darwin":      {},
     "aarch64-unknown-linux-gnu": {},
-    "x86_64-apple-darwin": {},
-    "x86_64-unknown-linux-gnu": {}
-  }
+    "x86_64-apple-darwin":       {},
+    "x86_64-unknown-linux-gnu":  {},
+  }.freeze
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
