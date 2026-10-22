@@ -1,25 +1,25 @@
 class Declutter < Formula
   desc "Review AI-generated diffs with comments, tests, imports, logging and formatting toggled in and out"
   homepage "https://github.com/NikolajMosbaek/declutter-diff"
-  version "0.1.3"
+  version "0.1.4"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/NikolajMosbaek/declutter-diff/releases/download/v0.1.3/declutter-diff-aarch64-apple-darwin.tar.xz"
-      sha256 "9e57dfabacabfc415bd1d4fa65354c9d8e060308759e9bd5665cfed2d2a73519"
+      url "https://github.com/NikolajMosbaek/declutter-diff/releases/download/v0.1.4/declutter-diff-aarch64-apple-darwin.tar.xz"
+      sha256 "f6541264441907c85665f5edbb5358442a87f8d63a7186ef69ed309c80e0d26b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/NikolajMosbaek/declutter-diff/releases/download/v0.1.3/declutter-diff-x86_64-apple-darwin.tar.xz"
-      sha256 "5d33d3217d14ea70aa9da933d42a5a2a05f1f19d471baad22cbdfa824669d955"
+      url "https://github.com/NikolajMosbaek/declutter-diff/releases/download/v0.1.4/declutter-diff-x86_64-apple-darwin.tar.xz"
+      sha256 "e4b8c0d8a3164484a22149023ed5c2dbc3c69902fb8509e00b4ca8f2595273a4"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/NikolajMosbaek/declutter-diff/releases/download/v0.1.3/declutter-diff-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "abd1bf6a1ac8e9126470448de8086607b36df67d6e7c2e8bb77f35c778fbbb1f"
+      url "https://github.com/NikolajMosbaek/declutter-diff/releases/download/v0.1.4/declutter-diff-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "885463eb9df254f1c3a5cc0fda09749df2a5d9c85f3d19338d2d801da70048a2"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/NikolajMosbaek/declutter-diff/releases/download/v0.1.3/declutter-diff-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "c71a009e5a3cd95f7922644556f8ad0a69b264741ba3ee11bd1ebdf807604b01"
+      url "https://github.com/NikolajMosbaek/declutter-diff/releases/download/v0.1.4/declutter-diff-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "80e1acf4e86122977e5e8c0281823d1b4ba6dbed56da1377c023c9b065692adb"
     end
   end
   license "MIT"
